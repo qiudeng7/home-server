@@ -1,0 +1,8 @@
+services:
+  frpc-apps:
+    image: snowdreamtech/frpc
+    container_name: frpc-apps
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - ./frpc.toml:/etc/frp/frpc.toml

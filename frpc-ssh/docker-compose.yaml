@@ -1,0 +1,8 @@
+services:
+  frpc-ssh:
+    image: snowdreamtech/frpc
+    container_name: frpc-ssh
+    restart: unless-stopped
+    network_mode: "host"
+    volumes:
+      - ./frpc.toml:/etc/frp/frpc.toml
